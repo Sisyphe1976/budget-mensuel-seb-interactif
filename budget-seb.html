@@ -10,21 +10,21 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg:        #0a0a14;
-    --surface:   #10101f;
-    --surface2:  #16162a;
-    --border:    #22224a;
-    --border2:   #1a1a36;
-    --text:      #ddd8cc;
-    --muted:     #5a5a8a;
-    --muted2:    #3a3a60;
-    --accent:    #a0a0cc;
+    --bg:        #f5f4f0;
+    --surface:   #ffffff;
+    --surface2:  #eeecea;
+    --border:    #d0cdc8;
+    --border2:   #e0ddd8;
+    --text:      #1a1a1a;
+    --muted:     #6b6560;
+    --muted2:    #9b9590;
+    --accent:    #2c4a8a;
     --red:       #c0392b;
-    --orange:    #d4832a;
-    --green:     #2a8a5a;
-    --green2:    #1a5a3a;
-    --blue:      #2980b9;
-    --purple:    #7c4ab8;
+    --orange:    #b36a00;
+    --green:     #1e7a45;
+    --green2:    #d4f0e2;
+    --blue:      #2060a8;
+    --purple:    #6030a0;
     --mono:      'DM Mono', monospace;
     --serif:     'Playfair Display', Georgia, serif;
   }
@@ -33,7 +33,7 @@
 
   /* ── Header ── */
   .header {
-    background: linear-gradient(160deg, #12122e 0%, var(--bg) 100%);
+    background: linear-gradient(160deg, #e8e4de 0%, var(--bg) 100%);
     border-bottom: 1px solid var(--border);
     padding: 22px 18px 18px;
     position: sticky; top: 0; z-index: 100;
@@ -61,10 +61,10 @@
   .bilan-sub { font-size: 9px; color: var(--muted2); margin-top: 2px; }
   .days-left { margin-top: 10px; text-align: center; font-size: 11px; color: var(--muted); }
   .days-left b { color: var(--accent); }
-  .days-left .per-day { color: #2ab870; }
+  .days-left .per-day { color: #1e7a45; }
 
   /* ── Barre de progression ── */
-  .bar-track { background: #0d0d20; border-radius: 4px; height: 5px; overflow: hidden; margin-top: 6px; }
+  .bar-track { background: #ddd9d2; border-radius: 4px; height: 5px; overflow: hidden; margin-top: 6px; }
   .bar-fill  { height: 100%; border-radius: 4px; transition: width 0.4s ease; }
 
   /* ── Catégories ── */
@@ -100,33 +100,33 @@
   .input-row { display: flex; gap: 4px; }
   .amt-wrap { position: relative; }
   .amt-sym { position: absolute; left: 7px; top: 50%; transform: translateY(-50%); color: var(--muted2); font-size: 11px; pointer-events: none; }
-  .amt-input { width: 70px; background: #060610; border: 1px solid var(--border); border-radius: 6px; color: var(--text); padding: 6px 6px 6px 18px; font-size: 13px; outline: none; text-align: right; font-family: var(--mono); }
+  .amt-input { width: 70px; background: #f8f7f4; border: 1px solid var(--border); border-radius: 6px; color: var(--text); padding: 6px 6px 6px 18px; font-size: 13px; outline: none; text-align: right; font-family: var(--mono); }
   .amt-input:focus { border-color: var(--blue); }
-  .btn-add { background: var(--green2); border: 1px solid var(--green); color: #2ab870; border-radius: 6px; padding: 0 10px; font-size: 20px; cursor: pointer; line-height: 1; }
-  .lbl-input { width: 112px; background: #060610; border: 1px solid var(--border2); border-radius: 6px; color: var(--muted); padding: 4px 6px; font-size: 10px; outline: none; font-family: var(--mono); }
+  .btn-add { background: var(--green2); border: 1px solid var(--green); color: var(--green); border-radius: 6px; padding: 0 10px; font-size: 20px; cursor: pointer; line-height: 1; }
+  .lbl-input { width: 112px; background: #f8f7f4; border: 1px solid var(--border2); border-radius: 6px; color: var(--muted); padding: 4px 6px; font-size: 10px; outline: none; font-family: var(--mono); }
 
   /* Tickets */
-  .tickets-list { background: #060612; padding: 4px 16px 10px 32px; }
-  .ticket-row { display: flex; align-items: center; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid #0e0e22; }
+  .tickets-list { background: #f0ede8; padding: 4px 16px 10px 32px; }
+  .ticket-row { display: flex; align-items: center; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid #ddd9d2; }
   .ticket-date { font-size: 10px; color: var(--muted2); }
   .ticket-label { font-size: 10px; color: var(--muted2); font-style: italic; margin-left: 8px; }
-  .ticket-amt { font-size: 11px; color: #7070a8; }
-  .btn-del { background: none; border: none; color: #5a2a2a; cursor: pointer; font-size: 16px; line-height: 1; padding: 0 2px; }
+  .ticket-amt { font-size: 11px; color: #4060a0; }
+  .btn-del { background: none; border: none; color: #c0392b; cursor: pointer; font-size: 16px; line-height: 1; padding: 0 2px; opacity: 0.5; }
   .tickets-total { text-align: right; margin-top: 5px; font-size: 11px; color: var(--muted2); }
   .tickets-total b { color: var(--accent); }
 
   /* ── Note ── */
   .note-block { margin-top: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 14px; }
   .block-label { font-size: 8px; letter-spacing: 3px; color: var(--muted); text-transform: uppercase; margin-bottom: 8px; }
-  .note-ta { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; color: var(--accent); padding: 10px; font-size: 12px; resize: vertical; min-height: 56px; font-family: var(--mono); outline: none; }
+  .note-ta { width: 100%; background: #f8f7f4; border: 1px solid var(--border); border-radius: 8px; color: var(--accent); padding: 10px; font-size: 12px; resize: vertical; min-height: 56px; font-family: var(--mono); outline: none; }
 
   /* ── Export / Import ── */
   .export-block { margin-top: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 14px; }
   .export-btns { display: flex; gap: 8px; margin-bottom: 8px; }
   .export-btns button { flex: 1; border-radius: 8px; padding: 11px 4px; font-size: 11px; cursor: pointer; font-family: var(--mono); border-width: 1px; border-style: solid; }
-  .btn-txt  { background: #0a1520; border-color: var(--blue);   color: var(--blue);   }
-  .btn-json { background: #12082a; border-color: var(--purple); color: var(--purple); }
-  .btn-imp  { background: #081408; border-color: var(--green);  color: #2ab870;       }
+  .btn-txt  { background: #e8f0f8; border-color: var(--blue);   color: var(--blue);   }
+  .btn-json { background: #f0e8f8; border-color: var(--purple); color: var(--purple); }
+  .btn-imp  { background: #e8f5ee; border-color: var(--green);  color: var(--green);  }
   .export-hint { font-size: 9px; color: var(--muted2); text-align: center; line-height: 1.6; }
 
   /* ── Modale ── */
@@ -135,28 +135,28 @@
   .modal-head { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; border-bottom: 1px solid var(--border2); }
   .modal-title { font-size: 13px; font-weight: 600; color: var(--accent); }
   .btn-close { background: none; border: none; color: var(--muted); font-size: 22px; cursor: pointer; line-height: 1; }
-  .modal-pre { flex: 1; overflow: auto; margin: 0; padding: 16px; font-family: var(--mono); font-size: 11px; line-height: 1.7; color: #b8b4a8; background: #050510; white-space: pre-wrap; word-break: break-word; cursor: text; user-select: text; }
+  .modal-pre { flex: 1; overflow: auto; margin: 0; padding: 16px; font-family: var(--mono); font-size: 11px; line-height: 1.7; color: #2a2a2a; background: #f5f4f0; white-space: pre-wrap; word-break: break-word; cursor: text; user-select: text; }
   .modal-foot { padding: 12px 18px; border-top: 1px solid var(--border2); display: flex; gap: 8px; flex-wrap: wrap; }
   .modal-foot button { flex: 1; min-width: 80px; border-radius: 8px; padding: 10px 8px; font-size: 11px; cursor: pointer; font-family: var(--mono); border-width: 1px; border-style: solid; }
-  .btn-copy   { background: #0a1520; border-color: var(--blue);   color: var(--blue);  }
-  .btn-copy.ok{ background: #081808; border-color: var(--green);  color: #2ab870;      }
-  .btn-sel    { background: #12080a; border-color: var(--orange); color: var(--orange);}
-  .btn-dl     { background: #0e0820; border-color: var(--purple); color: var(--purple);}
-  .btn-cancel { background: #110808; border-color: #3a2222;       color: #6a3a3a;      }
+  .btn-copy   { background: #e8f0f8; border-color: var(--blue);   color: var(--blue);  }
+  .btn-copy.ok{ background: #e8f5ee; border-color: var(--green);  color: var(--green); }
+  .btn-sel    { background: #fff4e8; border-color: var(--orange); color: var(--orange);}
+  .btn-dl     { background: #f0e8f8; border-color: var(--purple); color: var(--purple);}
+  .btn-cancel { background: #f8eeee; border-color: #d0a0a0;       color: #904040;      }
   .modal-hint { font-size: 9px; color: var(--muted2); text-align: center; padding: 0 18px 12px; }
 
   /* Import modale */
   .imp-hint { font-size: 11px; color: var(--muted); margin-bottom: 12px; line-height: 1.5; }
   .imp-hint b { color: var(--accent); }
-  .btn-file { width: 100%; background: #0a1520; border: 1px solid var(--blue); color: var(--blue); border-radius: 8px; padding: 11px 0; font-size: 12px; cursor: pointer; font-family: var(--mono); margin-bottom: 10px; }
-  .imp-ta { width: 100%; height: 100px; background: #050510; border: 1px solid var(--border); border-radius: 8px; color: var(--accent); padding: 10px; font-size: 11px; font-family: var(--mono); resize: vertical; outline: none; }
+  .btn-file { width: 100%; background: #e8f0f8; border: 1px solid var(--blue); color: var(--blue); border-radius: 8px; padding: 11px 0; font-size: 12px; cursor: pointer; font-family: var(--mono); margin-bottom: 10px; }
+  .imp-ta { width: 100%; height: 100px; background: #f5f4f0; border: 1px solid var(--border); border-radius: 8px; color: var(--accent); padding: 10px; font-size: 11px; font-family: var(--mono); resize: vertical; outline: none; }
   .imp-error { color: var(--red); font-size: 11px; margin-top: 6px; }
   .imp-btns { display: flex; gap: 8px; margin-top: 12px; }
-  .btn-do-imp { flex: 1; background: #081808; border: 1px solid var(--green); color: #2ab870; border-radius: 8px; padding: 10px 0; font-size: 12px; cursor: pointer; font-family: var(--mono); }
+  .btn-do-imp { flex: 1; background: #e8f5ee; border: 1px solid var(--green); color: var(--green); border-radius: 8px; padding: 10px 0; font-size: 12px; cursor: pointer; font-family: var(--mono); }
   .btn-do-imp:disabled { opacity: 0.3; cursor: default; }
 
   /* Flash */
-  .flash { position: fixed; top: 16px; left: 50%; transform: translateX(-50%); background: #0a2010; border: 1px solid var(--green); color: #2ab870; border-radius: 10px; padding: 10px 24px; font-size: 13px; font-weight: 600; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.6); font-family: var(--mono); pointer-events: none; }
+  .flash { position: fixed; top: 16px; left: 50%; transform: translateX(-50%); background: #e8f5ee; border: 1px solid var(--green); color: var(--green); border-radius: 10px; padding: 10px 24px; font-size: 13px; font-weight: 600; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.15); font-family: var(--mono); pointer-events: none; }
 
   /* Footer */
   .footer { text-align: center; margin-top: 16px; font-size: 9px; color: var(--muted2); letter-spacing: 2px; }
@@ -236,7 +236,7 @@ let state = {
   tickets: {},
   note: "",
   expanded: {},
-  modal: null,   // null | {type:'text'|'json'|'import', content?}
+  modal: null,
   flash: null,
 };
 
@@ -272,21 +272,21 @@ function sum(list){ return (list||[]).reduce((s,t)=>s+t.amount,0); }
 
 function resteLabel(reste){
   if(reste<0) return {text:`Dépassé de ${Math.abs(reste).toFixed(0)} €`, color:"#c0392b"};
-  if(reste===0) return {text:"Soldé", color:"#5a5a8a"};
-  return {text:`Reste : ${reste.toFixed(0)} €`, color:"#2a8a5a"};
+  if(reste===0) return {text:"Soldé", color:"#6b6560"};
+  return {text:`Reste : ${reste.toFixed(0)} €`, color:"#1e7a45"};
 }
 
 function badgeHTML(pct){
   if(pct<=0) return "";
-  if(pct<=70) return `<span class="badge" style="background:#1a5a3a">✅ OK</span>`;
-  if(pct<=95) return `<span class="badge" style="background:#5a3a10">⚠️ Attention</span>`;
-  if(pct<=100) return `<span class="badge" style="background:#5a1a10">🔴 Limite</span>`;
-  return `<span class="badge" style="background:#3a0808">🚨 Dépassé</span>`;
+  if(pct<=70) return `<span class="badge" style="background:#1e7a45">✅ OK</span>`;
+  if(pct<=95) return `<span class="badge" style="background:#b36a00">⚠️ Attention</span>`;
+  if(pct<=100) return `<span class="badge" style="background:#c0392b">🔴 Limite</span>`;
+  return `<span class="badge" style="background:#8b0000">🚨 Dépassé</span>`;
 }
 
 function barColor(pct, base){
-  if(pct>100) return "#7b0000";
-  if(pct>95)  return "#c0392b";
+  if(pct>100) return "#c0392b";
+  if(pct>95)  return "#d4832a";
   if(pct>70)  return "#d4832a";
   return base;
 }
@@ -360,8 +360,8 @@ function buildHTML(){
   const today      = (month===now.getMonth()&&year===now.getFullYear()) ? now.getDate() : daysInMonth;
   const daysLeft   = daysInMonth - today;
 
-  const bilanColor = totalReste<0 ? "#c0392b" : "#ddd8cc";
-  const depColor   = totalPct>100?"#c0392b":totalPct>80?"#d4832a":"#2ab870";
+  const bilanColor = totalReste<0 ? "#c0392b" : "#1a1a1a";
+  const depColor   = totalPct>100?"#c0392b":totalPct>80?"#d4832a":"#1e7a45";
 
   let html = `
   ${flash ? `<div class="flash">${flash}</div>` : ""}
@@ -384,7 +384,7 @@ function buildHTML(){
       <div class="bilan-grid">
         <div class="bilan-cell">
           <div class="bilan-label">Budget mensuel</div>
-          <div class="bilan-val" style="color:#5a5a8a">${TOTAL_BUDGET.toLocaleString("fr-FR")} €</div>
+          <div class="bilan-val" style="color:#6b6560">${TOTAL_BUDGET.toLocaleString("fr-FR")} €</div>
           <div class="bilan-sub">référence</div>
         </div>
         <div class="bilan-cell">
@@ -398,13 +398,12 @@ function buildHTML(){
           <div class="bilan-sub">${totalReste<0?"🚨 Dépassé":"disponible"}</div>
         </div>
       </div>
-      ${barHTML(totalPct,"#4a4a9a")}
+      ${barHTML(totalPct,"#8090c0")}
       ${daysLeft>0&&month===now.getMonth()&&year===now.getFullYear()&&totalReste>0
         ? `<div class="days-left"><b>${daysLeft} jour${daysLeft>1?"s":""}</b> restants · <span class="per-day">${(totalReste/daysLeft).toFixed(0)} €/j</span></div>`
         : ""}
     </div>`;
 
-  // Catégories
   CATEGORIES.forEach(cat=>{
     const cb  = cat.items.reduce((s,i)=>s+i.budget,0);
     const ct  = cat.items.reduce((s,i)=>s+sum(tickets[i.id]),0);
@@ -424,7 +423,7 @@ function buildHTML(){
           </div>
           <div class="cat-stats">
             <span>Budget : <b>${cb} €</b></span>
-            <span>Dépensé : <b style="color:${pct>100?"#c0392b":"#ddd8cc"}">${ct.toFixed(0)} €</b></span>
+            <span>Dépensé : <b style="color:${pct>100?"#c0392b":"#1a1a1a"}">${ct.toFixed(0)} €</b></span>
             <span style="color:${rl.color}"><b>${rl.text}</b></span>
           </div>
           ${barHTML(pct, cat.color)}
@@ -453,9 +452,9 @@ function buildHTML(){
               </div>
               <div class="item-meta">
                 <span>prévu ${item.budget} €</span>
-                ${t>0?`<span style="color:#6060a0">cumulé <b style="color:${pct2>100?"#c0392b":"#9090c0"}">${t.toFixed(2)} €</b></span>`:""}
+                ${t>0?`<span style="color:#808080">cumulé <b style="color:${pct2>100?"#c0392b":"#2c4a8a"}">${t.toFixed(2)} €</b></span>`:""}
               </div>
-              ${barHTML(pct2,"#3a3a8a")}
+              ${barHTML(pct2,"#8090c0")}
               ${it.length>0?`<button class="btn-toggle" data-toggle="${item.id}">${it.length} entrée${it.length>1?"s":""} ▾</button>`:""}
             </div>
             <div class="item-input">
@@ -469,7 +468,7 @@ function buildHTML(){
               <input class="lbl-input" data-lbl="${item.id}" placeholder="note (optionnel)">
             </div>
           </div>
-          <div class="tickets-list" id="tk-${item.id}" style="display:${it.length>0?'none':'none'}">
+          <div class="tickets-list" id="tk-${item.id}" style="display:none">
             ${it.map((tk,idx)=>`
               <div class="ticket-row">
                 <span class="ticket-date">${tk.date}${tk.label?`<span class="ticket-label">${tk.label}</span>`:""}</span>
@@ -487,14 +486,12 @@ function buildHTML(){
     html += `</div>`;
   });
 
-  // Note
   html += `
     <div class="note-block">
       <div class="block-label">Note du mois</div>
       <textarea class="note-ta" id="note-ta" placeholder="Charges exceptionnelles, contexte…">${note}</textarea>
     </div>`;
 
-  // Export / Import
   html += `
     <div class="export-block">
       <div class="block-label">Sauvegarde & Export</div>
@@ -504,15 +501,14 @@ function buildHTML(){
         <button class="btn-imp" id="exp-imp">📂 Importer</button>
       </div>
       <div class="export-hint">
-        <b style="color:#4a4a8a">Texte</b> → copier/coller dans Word ou mail ·
-        <b style="color:#4a4a8a">JSON</b> → télécharger pour sauvegarder ·
-        <b style="color:#4a4a8a">Importer</b> → recharger un .json sauvegardé
+        <b style="color:#2060a8">Texte</b> → copier/coller dans Word ou mail ·
+        <b style="color:#2060a8">JSON</b> → télécharger pour sauvegarder ·
+        <b style="color:#2060a8">Importer</b> → recharger un .json sauvegardé
       </div>
     </div>
     <div class="footer">Données sauvegardées localement · VRAI_BUDGET_SEB_1450 · v4</div>
   </div>`;
 
-  // Modales
   if(modal){
     if(modal.type==="text" || modal.type==="json"){
       const title = modal.type==="json" ? "🗂️ Export JSON — sauvegarde" : "📋 Export texte";
@@ -571,17 +567,14 @@ function escHtml(s){ return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").r
 // ÉVÉNEMENTS
 // ═══════════════════════════════════════════════════════════════
 function attachEvents(){
-  // Navigation mois
   document.getElementById("prev")?.addEventListener("click",()=>{ changeMonth(-1); });
   document.getElementById("next")?.addEventListener("click",()=>{ changeMonth(1); });
 
-  // Reset
   document.getElementById("reset-btn")?.addEventListener("click",()=>{
     if(!confirm(`Effacer toutes les données de ${MONTHS[state.month]} ${state.year} ?`)) return;
     state.tickets={}; state.note=""; persist(); render();
   });
 
-  // Catégories toggle
   document.querySelectorAll(".cat-header[data-cat]").forEach(el=>{
     el.addEventListener("click",()=>{
       const id = el.dataset.cat;
@@ -590,7 +583,6 @@ function attachEvents(){
     });
   });
 
-  // Toggle tickets
   document.querySelectorAll(".btn-toggle[data-toggle]").forEach(btn=>{
     btn.addEventListener("click",e=>{
       e.stopPropagation();
@@ -600,7 +592,6 @@ function attachEvents(){
     });
   });
 
-  // Ajouter ticket
   document.querySelectorAll(".btn-add[data-add]").forEach(btn=>{
     btn.addEventListener("click",()=>{
       const id  = btn.dataset.add;
@@ -613,7 +604,6 @@ function attachEvents(){
     });
   });
 
-  // Enter dans champ montant
   document.querySelectorAll(".amt-input").forEach(inp=>{
     inp.addEventListener("keydown",e=>{
       if(e.key!=="Enter") return;
@@ -621,7 +611,6 @@ function attachEvents(){
     });
   });
 
-  // Supprimer ticket
   document.querySelectorAll(".btn-del[data-del]").forEach(btn=>{
     btn.addEventListener("click",e=>{
       e.stopPropagation();
@@ -632,27 +621,22 @@ function attachEvents(){
     });
   });
 
-  // Note
   document.getElementById("note-ta")?.addEventListener("input",e=>{
     state.note = e.target.value; persist();
   });
 
-  // Export texte
   document.getElementById("exp-txt")?.addEventListener("click",()=>{
     state.modal = {type:"text", content:buildExportText()}; render();
   });
 
-  // Export JSON
   document.getElementById("exp-json")?.addEventListener("click",()=>{
     state.modal = {type:"json", content:buildJsonExport()}; render();
   });
 
-  // Import
   document.getElementById("exp-imp")?.addEventListener("click",()=>{
     state.modal = {type:"import"}; render();
   });
 
-  // Fermer modale
   ["modal-close","modal-close2","modal-overlay"].forEach(id=>{
     document.getElementById(id)?.addEventListener("click",(e)=>{
       if(id==="modal-overlay" && e.target.id!=="modal-overlay") return;
@@ -660,7 +644,6 @@ function attachEvents(){
     });
   });
 
-  // Copier
   document.getElementById("btn-copy")?.addEventListener("click",async()=>{
     try {
       await navigator.clipboard.writeText(state.modal.content);
@@ -671,10 +654,8 @@ function attachEvents(){
     }
   });
 
-  // Sélectionner
   document.getElementById("btn-sel")?.addEventListener("click",()=>{ selectModalText(); });
 
-  // ⬇️ Télécharger — fonctionne dans un vrai navigateur
   document.getElementById("btn-dl")?.addEventListener("click",(e)=>{
     const btn   = e.currentTarget;
     const fname = btn.dataset.fname;
@@ -686,7 +667,6 @@ function attachEvents(){
     setTimeout(()=>URL.revokeObjectURL(url), 1000);
   });
 
-  // Import — choisir fichier
   document.getElementById("btn-pick-file")?.addEventListener("click",()=>{
     document.getElementById("imp-file")?.click();
   });
@@ -697,7 +677,6 @@ function attachEvents(){
     reader.readAsText(file);
   });
 
-  // Import — valider
   document.getElementById("btn-do-imp")?.addEventListener("click",()=>{
     const text = document.getElementById("imp-ta")?.value||"";
     try {
